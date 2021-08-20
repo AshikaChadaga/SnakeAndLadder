@@ -17,13 +17,15 @@ public class SnakeAndLadderSim {
 		System.out.println("---------- Welcome to the Game of SNAKES AND LADDERS!! ----------");
 		
 		int positionA = 0;
+		int diceCount = 0;
 		
 		while(positionA < MAX_POSITION) {
 			
 			int dice = getRandomInteger(7,1);
-			System.out.println("dice : "+dice);
+			diceCount ++;
+//			System.out.println("dice : "+dice);
 			int checkPlay = (int) Math.floor(Math.random()*10)%3;
-			System.out.println("checkplay : "+checkPlay);
+//			System.out.println("checkplay : "+checkPlay);
 			
 			switch(checkPlay) {
 				case NO_PLAY: 
@@ -43,9 +45,9 @@ public class SnakeAndLadderSim {
 					}
 					break;
 			}
-			System.out.println("end : "+positionA);
-		}
-
+			System.out.println("Position after Die Roll "+diceCount+" : "+positionA);
+		}	
+		System.out.println("Total Dice Rolls : "+diceCount);
 	}
 
 }
