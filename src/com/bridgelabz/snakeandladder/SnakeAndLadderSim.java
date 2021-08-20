@@ -16,7 +16,7 @@ public class SnakeAndLadderSim {
 		
 		System.out.println("---------- Welcome to the Game of SNAKES AND LADDERS!! ----------");
 		
-int positionA = 0;
+		int positionA = 0;
 		
 		while(positionA < MAX_POSITION) {
 			
