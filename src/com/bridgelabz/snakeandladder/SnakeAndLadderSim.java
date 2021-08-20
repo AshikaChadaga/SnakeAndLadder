@@ -16,7 +16,7 @@ public class SnakeAndLadderSim {
 		
 		System.out.println("---------- Welcome to the Game of SNAKES AND LADDERS!! ----------");
 		
-		int positionA = 0;
+int positionA = 0;
 		
 		while(positionA < MAX_POSITION) {
 			
@@ -31,12 +31,16 @@ public class SnakeAndLadderSim {
 					
 				case LADDER: 
 					positionA += dice;
+					if(positionA > MAX_POSITION) {
+						positionA = positionA-dice;
+					}
 					break;
 				
 				case SNAKE: 
 					positionA -= dice;
-					if(positionA < MIN_POSITION )
+					if(positionA < MIN_POSITION ) {
 						positionA = 0;
+					}
 					break;
 			}
 			System.out.println("end : "+positionA);
