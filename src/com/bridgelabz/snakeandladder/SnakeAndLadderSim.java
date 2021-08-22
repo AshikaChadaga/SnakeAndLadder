@@ -8,8 +8,8 @@ public class SnakeAndLadderSim {
 	private static final int MAX_POSITION = 100;
 	private static final int MIN_POSITION = 0;
 	
-	public static int positionA = 0;
-	public static int positionB = 0;
+	public static int positionOfPlayerA = 0;
+	public static int positionOfPlayerB = 0;
 	
 	public static int getRandomInteger(int maximum, int minimum){ 
 		return ((int) (Math.random()*(maximum - minimum))) + minimum; 
@@ -29,26 +29,26 @@ public class SnakeAndLadderSim {
 				break;
 				
 			case LADDER: 
-				positionA += dice;
-				if(positionA > MAX_POSITION) {
-					positionA = positionA-dice;
+				positionOfPlayerA += dice;
+				if(positionOfPlayerA > MAX_POSITION) {
+					positionOfPlayerA = positionOfPlayerA-dice;
 				}
-				if(positionA == MAX_POSITION) {
+				if(positionOfPlayerA == MAX_POSITION) {
 //					System.out.println("Position of A : "+ positionA);
-					return positionA;
+					return positionOfPlayerA;
 				}
 				playerA();
 				break;
 			
 			case SNAKE: 
-				positionA -= dice;
-				if(positionA < MIN_POSITION ) {
-					positionA = 0;
+				positionOfPlayerA -= dice;
+				if(positionOfPlayerA < MIN_POSITION ) {
+					positionOfPlayerA = 0;
 				}
 				break;
 		}
 //		System.out.println("Position of A : "+ positionA);
-		return positionA;
+		return positionOfPlayerA;
 	}
 	
 	public static int playerB() {
@@ -65,26 +65,26 @@ public class SnakeAndLadderSim {
 				break;
 				
 			case LADDER: 
-				positionB += dice;
-				if(positionB > MAX_POSITION) {
-					positionB = positionB-dice;
+				positionOfPlayerB += dice;
+				if(positionOfPlayerB > MAX_POSITION) {
+					positionOfPlayerB = positionOfPlayerB-dice;
 				}
-				if(positionB == MAX_POSITION) {
+				if(positionOfPlayerB == MAX_POSITION) {
 //					System.out.println("Position of B : "+ positionB);
-					return positionB;
+					return positionOfPlayerB;
 				}
 				playerB();
 				break;
 			
 			case SNAKE: 
-				positionB -= dice;
-				if(positionB < MIN_POSITION ) {
-					positionB = 0;
+				positionOfPlayerB -= dice;
+				if(positionOfPlayerB < MIN_POSITION ) {
+					positionOfPlayerB = 0;
 				}
 				break;
 		}
 //		System.out.println("Position of B : "+ positionB);
-		return positionB;
+		return positionOfPlayerB;
 	}
 	
 	public static void main(String[] args) {
