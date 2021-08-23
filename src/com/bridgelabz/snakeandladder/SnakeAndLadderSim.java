@@ -31,10 +31,8 @@ public class SnakeAndLadderSim {
 			case SNAKE: 
 				startPositionA -= dice;
 				break;
-		}
-		
+		}		
 		System.out.println(startPositionA);
-
 	}
 
 }
