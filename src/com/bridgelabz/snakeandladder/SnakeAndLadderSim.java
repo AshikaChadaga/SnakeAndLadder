@@ -34,7 +34,7 @@ public class SnakeAndLadderSim {
 					positionA = positionA-dice;
 				}
 				if(positionA == MAX_POSITION) {
-//					System.out.println("Position of A : "+ positionA);
+
 					return positionA;
 				}
 				playerA();
@@ -47,7 +47,6 @@ public class SnakeAndLadderSim {
 				}
 				break;
 		}
-//		System.out.println("Position of A : "+ positionA);
 		return positionA;
 	}
 	
@@ -70,7 +69,7 @@ public class SnakeAndLadderSim {
 					positionB = positionB-dice;
 				}
 				if(positionB == MAX_POSITION) {
-//					System.out.println("Position of B : "+ positionB);
+
 					return positionB;
 				}
 				playerB();
@@ -83,7 +82,6 @@ public class SnakeAndLadderSim {
 				}
 				break;
 		}
-//		System.out.println("Position of B : "+ positionB);
 		return positionB;
 	}
 	
@@ -109,12 +107,9 @@ public class SnakeAndLadderSim {
 				System.out.println("--------PLAYER B WON !!--------");
 				System.exit(0);
 				
-			}
-			
+			}		
 			
 		}	
 		
-		
 	}
-
 }
