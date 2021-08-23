@@ -7,7 +7,5 @@ public class SnakeAndLadderSim {
 		System.out.println("---------- Welcome to the Game of SNAKES AND LADDERS!! ----------");
 		
 		int startPositionA = 0;
-
 	}
-
 }
