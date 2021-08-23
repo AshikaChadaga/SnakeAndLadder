@@ -12,8 +12,5 @@ public class SnakeAndLadderSim {
 		
 		int startPositionA = 0;
 		int dice = getRandomInteger(7,1);
-		//System.out.println(dice);
-
 	}
-
 }
