@@ -1,6 +1,7 @@
 package com.bridgelabz.snakeandladder;
 
-public class SnakeAndLadderSim {
+
+public class SnakeAndLadder {
 	
 	private static final int NO_PLAY = 0;
 	private static final int LADDER = 1;
@@ -15,7 +16,7 @@ public class SnakeAndLadderSim {
 		return ((int) (Math.random()*(maximum - minimum))) + minimum; 
 	}
 	
-	public static int playerA() {
+	public static int turnOfPlayerA() {
 		System.out.println("Player A is Rolling Dice");
 		int dice = getRandomInteger(7,1);
 		System.out.println("dice for A : "+dice);
@@ -34,10 +35,9 @@ public class SnakeAndLadderSim {
 					positionOfPlayerA = positionOfPlayerA-dice;
 				}
 				if(positionOfPlayerA == MAX_POSITION) {
-//					System.out.println("Position of A : "+ positionA);
 					return positionOfPlayerA;
 				}
-				playerA();
+				turnOfPlayerA();
 				break;
 			
 			case SNAKE: 
@@ -51,7 +51,7 @@ public class SnakeAndLadderSim {
 		return positionOfPlayerA;
 	}
 	
-	public static int playerB() {
+	public static int turnOfPlayerB() {
 		System.out.println("Player B is Rolling Dice");
 		int dice = getRandomInteger(7,1);
 		System.out.println("dice for B : "+dice);
@@ -73,7 +73,7 @@ public class SnakeAndLadderSim {
 //					System.out.println("Position of B : "+ positionB);
 					return positionOfPlayerB;
 				}
-				playerB();
+				turnOfPlayerB();
 				break;
 			
 			case SNAKE: 
@@ -94,7 +94,7 @@ public class SnakeAndLadderSim {
 		int positionOfA = 0, positionOfB = 0;
 		while(positionOfA < MAX_POSITION || positionOfB < MAX_POSITION) {
 			
-			positionOfA = playerA();
+			positionOfA = turnOfPlayerA();
 			if(positionOfA == MAX_POSITION) {
 				System.out.println("Position of A : "+ positionOfA);
 				System.out.println("Position of B : "+ positionOfB);
@@ -102,7 +102,7 @@ public class SnakeAndLadderSim {
 				System.exit(0);
 			}
 			
-			positionOfB = playerB();
+			positionOfB = turnOfPlayerB();
 			if(positionOfB == MAX_POSITION) {
 				System.out.println("Position of A : "+ positionOfA);
 				System.out.println("Position of B : "+ positionOfB);
