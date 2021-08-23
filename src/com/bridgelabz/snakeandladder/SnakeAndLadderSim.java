@@ -41,7 +41,5 @@ public class SnakeAndLadderSim {
 			}
 			System.out.println("end : "+positionA);
 		}
-
 	}
-
 }
