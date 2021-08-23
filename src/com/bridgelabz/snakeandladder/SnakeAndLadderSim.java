@@ -49,5 +49,4 @@ public class SnakeAndLadderSim {
 		}	
 		System.out.println("Total Dice Rolls : "+diceCount);
 	}
-
 }
